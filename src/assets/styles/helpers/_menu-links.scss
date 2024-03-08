@@ -31,12 +31,20 @@
 		}
 	}
 
+	&--statistics-mobile {
+		&::before {
+			background-image: url('../../../images/icons/stat-mobile.svg');
+
+		}
+	}
+
 	&--statistics {
 		&::before {
 			background-image: url('../../../images/icons/stat.svg');
 		}
 	}
 
+	&--affiliate,
 	&--affiliate-program {
 		&::before {
 			background-image: url('../../../images/icons/people.svg');
@@ -44,6 +52,8 @@
 	}
 
 	@media(any-hover:hover) {
+
+
 		&:hover {
 			&.link--dashboard {
 				&::before {
@@ -63,16 +73,63 @@
 				}
 			}
 
+			&.link--statistics-mobile {
+
+				background-image: url('../../../images/icons/stat-mobile-active.svg');
+			}
+
 			&.link--statistics {
 				&::before {
 					background-image: url('../../../images/icons/stat-active.svg');
 				}
 			}
 
+			&.link--affiliate,
 			&.link--affiliate-program {
 				&::before {
 					background-image: ('../../../images/icons/people-active.svg');
 				}
+			}
+		}
+	}
+
+	&.selected {
+
+		&.link--dashboard {
+			&::before {
+				background-image: url('../../../images/icons/dashboard-active.svg');
+			}
+		}
+
+		&.link--wallets {
+			&::before {
+				background-image: url('../../../images/icons/wallet-active.svg');
+			}
+		}
+
+		&.link--investments {
+			&::before {
+				background-image: url('../../../images/icons/invest-active.svg');
+			}
+		}
+
+		&.link--statistics-mobile {
+			&::before {
+
+				background-image: url('../../../images/icons/stat-mobile-active.svg');
+			}
+		}
+
+		&.link--statistics {
+			&::before {
+				background-image: url('../../../images/icons/stat-active.svg');
+			}
+		}
+
+		&.link--affiliate,
+		&.link--affiliate-program {
+			&::before {
+				background-image: url('../../../images/icons/people-active.svg');
 			}
 		}
 	}

@@ -3,6 +3,12 @@
 	flex-direction: column;
 	gap: 60px;
 	padding: 40px;
+	border-radius: 12px;
+
+	@media(min-width:992px) {
+		height: 670px;
+
+	}
 
 	@media(max-width:1350px) {
 		padding: 2rem;
@@ -72,6 +78,7 @@
 
 	&__text {
 		color: #4F4F4F;
+		font-size: 12px;
 	}
 }
 

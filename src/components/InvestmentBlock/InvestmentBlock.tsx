@@ -113,7 +113,7 @@ const InvestmentBlock = () => {
 				</div>
 				<ButtonBorderGradient name={'to dashboard'} link='/dashboard' />
 				<div className={styles.confirm__img}>
-					<Image src={decorImg} alt={'decor'} />
+					<Image src={decorImg} alt={'decor'} fill={true} />
 				</div>
 			</div>
 		)}

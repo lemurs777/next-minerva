@@ -34,7 +34,7 @@ const HomePage = () => {
 					</div>
 				)}
 			</div>
-			<div className='section' id='services'>
+			<div className='section home-page__calc' id='services'>
 				<ProfitCalculation />
 			</div>
 			{!breakpoints.isMobile && (

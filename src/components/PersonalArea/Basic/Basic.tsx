@@ -1,3 +1,4 @@
+'use client'
 import Frame from '@/components/Frame'
 
 import Tooltip from '@/components/ui/CustomTooltip'
@@ -6,7 +7,9 @@ import walletIcon from '@/images/wallets/btc.svg'
 import Image from 'next/image'
 import styles from './Basic.module.scss'
 import RadialChart from '@/components/charts/RadialChart'
+import { useState } from 'react'
 const Basic = () => {
+	const [newCount, setNewCount] = useState(false)
 	return <Frame className={styles.basic}>
 
 		<div className={styles.basic__head}>
@@ -24,7 +27,10 @@ const Basic = () => {
 			<div className={styles.total}>
 				<div className={styles.total__title}>Total earned:</div>
 				<div className={styles.total__info}>
-					<span>+10% /</span> +153 $
+					<span className={styles.accent}>+10% /</span><span onMouseEnter={() => setNewCount(true)}
+						onMouseLeave={() => setNewCount(false)}
+					>
+						{!newCount ? '+153 $' : '0.002159BTC'} </span>
 				</div>
 			</div>
 			<div className={styles.total}>

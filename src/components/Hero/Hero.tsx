@@ -39,10 +39,10 @@ const Hero = () => {
 			<div className='container'>
 				<div className={styles.hero__decors}>
 
-					<Image src={decorSmImg} alt={'decor'} style={calculateParallaxOffset(5)} />
-					<Image src={decorSmImg} alt={'decor'} style={calculateParallaxOffset(10)} />
+					<Image src={decorSmImg} alt={'decor'} style={calculateParallaxOffset(15)} />
+					<Image src={decorSmImg} alt={'decor'} style={calculateParallaxOffset(20)} />
+					<Image src={decorLgImg} alt={'decor'} style={calculateParallaxOffset(25)} />
 					<Image src={decorLgImg} alt={'decor'} style={calculateParallaxOffset(15)} />
-					<Image src={decorLgImg} alt={'decor'} style={calculateParallaxOffset(5)} />
 				</div>
 				<div className={styles.hero__inner}>
 					<div className={styles.hero__content}>

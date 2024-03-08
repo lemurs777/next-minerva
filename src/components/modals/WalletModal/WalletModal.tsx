@@ -45,6 +45,7 @@ const WalletModal = ({ isOpen, onClose }: Props) => {
 					onClick={buttonAddHandler}
 					className={styles.content__btn} name='activate 
 				selected wallets'>
+
 					<OkIcon />
 				</ButtonBorderGradient>
 			</div>

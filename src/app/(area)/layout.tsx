@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Bai_Jamjuree } from 'next/font/google'
 import '../../assets/styles/globals.scss'
 import { Context } from '@/utils/context/Context'
+import MobileNav from '@/components/MobileNav'
 
 const bai = Bai_Jamjuree({
 	subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
 						<main className='main'>{children}</main>
 						<Footer />
 					</div>
+					<MobileNav />
 				</body>
 			</html>
 		</Context>

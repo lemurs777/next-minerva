@@ -6,7 +6,6 @@
 	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
 	backdrop-filter: blur(12.5px);
 	max-width: 1226px;
-	min-height: 80vh;
 	overflow: hidden;
 	margin: 0 auto;
 	text-align: center;
@@ -66,7 +65,7 @@
 	}
 
 	&__body {
-		padding: 0 15px 45px;
+		padding: 0 15px 40px;
 	}
 
 	&__inner {}

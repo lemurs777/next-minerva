@@ -1,6 +1,7 @@
 'use client'
 import { ApexOptions } from 'apexcharts'
 import dynamic from "next/dynamic"
+import styles from './RadialChart.module.scss'
 // import ReactApexChart from 'react-apexcharts'
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false })
 const RadialChart = () => {
@@ -120,8 +121,8 @@ const RadialChart = () => {
 				hollow: {
 					size: '70%',
 				},
-				dataLabels: {
 
+				dataLabels: {
 					name: {
 						fontSize: '12px',
 						fontWeight: 300,
@@ -139,6 +140,7 @@ const RadialChart = () => {
 				},
 			},
 		},
+
 		fill: {
 
 			type: 'gradient',
@@ -147,7 +149,7 @@ const RadialChart = () => {
 				colorStops: [
 					{
 						offset: 0,
-						color: "#4757E6",
+						color: "#FA0A9A",
 						opacity: 1
 					},
 					{
@@ -157,19 +159,29 @@ const RadialChart = () => {
 					},
 					{
 						offset: 100,
-						color: "#FA0A9A",
+						color: "#4757E6",
 						opacity: 1
-					}
+					},
+
 				],
 			}
 		},
+		stroke: {
+			lineCap: 'round',
+
+		},
+
 		labels: ['DAYS IN WORK'],
+		xaxis: {
+
+			position: 'center'
+		}
 	}
 
 
-	return <>
-		<ReactApexChart options={options} series={series} type="radialBar" height={170} width={'100%'} />
-	</>
+	return <div className={styles.chart}>
+		<ReactApexChart options={options} series={series} type="radialBar" height={200} width={'100%'} />
+	</div>
 }
 
 export default RadialChart

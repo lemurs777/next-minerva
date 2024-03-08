@@ -1,0 +1,25 @@
+<svg width="1920" height="2125" viewBox="0 0 1920 2125" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_146_549)">
+<rect width="1920" height="2125" fill="white"/>
+<circle cx="424.5" cy="1018.5" r="896.5" fill="url(#paint0_radial_146_549)"/>
+<circle cx="613" cy="-261" r="708" fill="url(#paint1_radial_146_549)"/>
+<circle cx="1568" cy="614" r="708" fill="url(#paint2_radial_146_549)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_146_549" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(424.5 1018.5) rotate(90) scale(896.5)">
+<stop stop-color="#91CAFF" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#F3CAF2" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_146_549" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(613 -261) rotate(90) scale(708)">
+<stop stop-color="#C5FBFF"/>
+<stop offset="1" stop-color="#F3CAF2" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_146_549" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1568 614) rotate(90) scale(708)">
+<stop stop-color="#C5FBFF"/>
+<stop offset="1" stop-color="#CCD4FF" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_146_549">
+<rect width="1920" height="2125" fill="white"/>
+</clipPath>
+</defs>
+</svg>

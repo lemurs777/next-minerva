@@ -9,18 +9,20 @@
 	flex-direction: column;
 	gap: 56px;
 	align-items: center;
+	width: 100%;
+	max-width: 510px;
 
 	@media(min-width:768px) {
-		max-width: 257px;
+		// max-width: 257px;
 	}
 
 	&__top {
-		@media(max-width:767.98px) {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 50px;
-		}
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+
 	}
 
 	&__topBtns {
@@ -69,6 +71,25 @@
 			translate: 0 -50%;
 			left: 0;
 			content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M13 8.5L1.75 14.9952L1.75 2.00481L13 8.5Z" fill="url(%23paint0_linear_164_1894)"/><defs>	<linearGradient id="paint0_linear_164_1894" x1="-2" y1="5.5" x2="15" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="%234757E6"/><stop offset="0.484375" stop-color="%238E54E9"/><stop offset="1" stop-color="%23FA0A9A"/></linearGradient></defs></svg>');
+		}
+	}
+}
+
+.btnAvatar {
+	&:first-child {}
+
+	@media(any-hover:hover) {
+		&:hover {
+			background: transparent !important;
+
+			span {
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			svg {
+				fill: url();
+			}
 		}
 	}
 }

@@ -11,6 +11,20 @@
 	&__btnIcon {
 		transition: .2s ease-in-out;
 		color: #4857E6;
+		position: relative;
+
+		&::after {
+			content: '';
+			border-radius: 10px;
+			position: absolute;
+			top: calc(100% - 2px);
+			width: calc(100% - 4px);
+
+			height: 2px;
+			background-color: #B3B8F3;
+			left: 50%;
+			translate: -50% 0;
+		}
 	}
 
 	&__btn {
@@ -77,6 +91,16 @@
 		img {
 			object-fit: contain;
 			object-position: center;
+		}
+	}
+
+	&__copy {
+		@media(any-hover:hover) {
+			&:hover {
+				.replenish__btnIcon {
+					color: #fff;
+				}
+			}
 		}
 	}
 }

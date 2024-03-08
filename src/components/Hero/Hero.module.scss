@@ -1,7 +1,7 @@
 @import '../../assets/styles/helpers/mixins';
 
 .hero {
-	background: url('/images/hero-bg.png') center/cover no-repeat;
+	background: url('../../images/hero-bg.svg') center/cover no-repeat;
 	position: relative;
 	padding-top: 110px;
 	display: flex;
@@ -9,19 +9,24 @@
 
 	@media(min-width:1050px) {
 		height: 100vh;
-		max-height: 1080vh;
+		max-height: 1080px;
 
 	}
 
 	:global {
 		.container {
-			margin-top: auto;
+			// margin-top: auto;
 			// height: 100%;
 			position: relative;
 		}
 	}
 
 	&__text {
+		color: var(--black);
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 1.25em;
+
 		@media(max-width:767.98px) {
 			text-align: center;
 		}
@@ -33,6 +38,7 @@
 		display: flex;
 		position: relative;
 		z-index: 1;
+		height: 100%;
 
 		@media(max-width:1049.98px) {
 			flex-direction: column;
@@ -46,6 +52,7 @@
 		flex-direction: column;
 		gap: 40px;
 		max-width: 853px;
+		justify-content: center;
 
 		@media(max-width:767.98px) {
 			gap: 36px;
@@ -75,8 +82,8 @@
 
 		&::before {
 			position: absolute;
-			top: 200px;
-			left: 12%;
+			top: 30%;
+			left: 3%;
 			width: 84px;
 			height: 91px;
 			z-index: 5;
@@ -108,10 +115,14 @@
 		line-height: 100%;
 
 
-		@include adaptive-font(64, 24);
+		// @include adaptive-font(64, 24);
+		@media(max-width:1350px) {
+			font-size: 40px;
+		}
 
 		@media(max-width:767.98px) {
 			text-align: center;
+			font-size: 24px;
 		}
 
 		span {
@@ -188,7 +199,7 @@
 	&__btns {
 		display: flex;
 		// align-items: center;
-		justify-content: center;
+		// justify-content: center;
 		gap: 85px;
 
 		@media(min-width:1400px) {
@@ -242,7 +253,6 @@
 	}
 
 	@media(max-width:767.98px) {
-		background-color: #fff;
 		border-radius: 12px;
 		font-size: 1rem;
 	}

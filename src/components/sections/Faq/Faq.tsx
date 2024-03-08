@@ -8,37 +8,44 @@ import Accordion from '@/components/Accordion/Accordion'
 const Faq = () => {
 	const accordionList = [
 		{
+			id: 1,
 			question: 'How does Minerva Bot work?',
 			answer:
 				'By connecting to the company`s exchange accounts, the Minerva bot carries out a large number of transactions on the cryptocurrency market, making a profit and adding profit to the investor`s balance on a daily basis.',
 		},
 		{
+			id: 2,
 			question: 'How to start?',
 			answer:
 				'By connecting to the company`s exchange accounts, the Minerva bot carries out a large number of transactions on the cryptocurrency market, making a profit and adding profit to the investor`s balance on a daily basis.',
 		},
 		{
+			id: 3,
 			question:
 				'What cryptocurrencies are available for deposits and withdrawals?',
 			answer:
 				'By connecting to the company`s exchange accounts, the Minerva bot carries out a large number of transactions on the cryptocurrency market, making a profit and adding profit to the investor`s balance on a daily basis.',
 		},
 		{
+			id: 4,
 			question: 'How to manage my balance?',
 			answer:
 				'By connecting to the company`s exchange accounts, the Minerva bot carries out a large number of transactions on the cryptocurrency market, making a profit and adding profit to the investor`s balance on a daily basis.',
 		},
 		{
+			id: 5,
 			question: 'How long does it take to replenish?',
 			answer:
 				'By connecting to the company`s exchange accounts, the Minerva bot carries out a large number of transactions on the cryptocurrency market, making a profit and adding profit to the investor`s balance on a daily basis.',
 		},
 		{
+			id: 6,
 			question: 'How do investment offers work?',
 			answer:
 				'By connecting to the company`s exchange accounts, the Minerva bot carries out a large number of transactions on the cryptocurrency market, making a profit and adding profit to the investor`s balance on a daily basis.',
 		},
 		{
+			id: 7,
 			question:
 				'Are there any fees for withdrawals or deposits on the platform?',
 			answer:

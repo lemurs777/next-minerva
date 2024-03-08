@@ -32,13 +32,13 @@ const Upliner = () => {
 			legend: {
 				position: "right",
 
+			},
+			xaxis: {
+				position: 'left'
 			}
 		},
 		// responsive: false,
 		maintainAspectRatio: false,
-		layout: {
-
-		}
 	}
 	const tabBtns = ['detailed statistics', 'time chart']
 	return <Frame className={styles.upliner}>
