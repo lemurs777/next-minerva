@@ -1,0 +1,118 @@
+.info {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+
+	&__header {
+		@media(max-width:767.98px) {
+			text-align: center;
+		}
+	}
+}
+
+.title {
+	@media(max-width:767.98px) {
+		font-weight: 700;
+		font-size: 18px;
+		text-align: center;
+	}
+
+}
+
+.select {
+	width: 100%;
+
+	&__wrap {
+
+		label {
+			text-transform: capitalize;
+			color: #000;
+			margin-bottom: 13px;
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+
+	&__btn {
+		justify-content: center;
+
+		&::after {
+			translate: 0 0;
+			position: static;
+			border: none !important;
+			content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M7.5 15L1.00481 3.75L13.9952 3.75L7.5 15Z" fill="url(%23paint0_linear_164_1919)"/><defs><linearGradient id="paint0_linear_164_1919" x1="10.5" y1="-4.20275e-07" x2="4" y2="17" gradientUnits="userSpaceOnUse"><stop stop-color="%234757E6"/><stop offset="0.484375" stop-color="%238E54E9"/><stop offset="1" stop-color="%23FA0A9A"/></linearGradient></defs></svg>');
+		}
+	}
+}
+
+.form {
+	margin-top: auto;
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 13px;
+		margin-bottom: 52px;
+
+		@media(max-width:991.98px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media(max-width:767.98px) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		gap: 13px;
+		width: 100%;
+		max-width: 286px;
+
+		@media(max-width:767.98px) {
+			max-width: none;
+		}
+
+		&:nth-child(2) {
+			margin: 0 auto;
+		}
+
+		&:last-child {
+			margin-left: auto;
+
+			@media(max-width:767.98px) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__submit {
+		max-width: 355px;
+		width: 100%;
+		background: linear-gradient(to right, transparent, transparent 50%, #4776E6 50%, #8E54E9 75%, #BB0AFA 100%);
+		background-size: 200% auto;
+
+		span {
+
+			font-size: 20px;
+			font-weight: 700 !important;
+			line-height: 100%;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			background: var(--Elecric-Violet, linear-gradient(90deg, #4776E6 0%, #8E54E9 100%));
+		}
+
+		&::before {
+			background: linear-gradient(to right, #4776E6, #8E54E9, #BB0AFA);
+		}
+
+	}
+}

@@ -1,0 +1,48 @@
+.pagination {
+	display: flex;
+	align-items: center;
+
+	@media(max-width:767.98px) {
+		width: 100%;
+	}
+
+	&__fragment {
+		margin-right: 16px;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		@media(max-width:767.98px) {
+			width: 100%;
+			justify-content: space-between;
+
+		}
+
+
+
+	}
+
+	&__button {
+		border-radius: 12px;
+		border: 1px solid #E5E5E5;
+		padding: 14px;
+		color: #494949;
+
+
+
+		&.disabled {
+			color: #CFCFCF;
+		}
+	}
+
+	&__buttonPrev {
+		rotate: 180deg;
+
+		@media(max-width:767.98px) {
+			order: -1;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.pinCode {
+	&__label {
+		color: #000;
+		font-size: 18px;
+		margin-bottom: 14px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+		text-transform: uppercase;
+		display: block;
+		text-align: center;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		gap: 5px;
+		align-items: center;
+	}
+
+	input {
+		width: 47px;
+		height: 51px;
+		text-align: center;
+		border-radius: .75rem;
+		border: 1px solid #C2C2C2;
+		font-weight: 500;
+	}
+}

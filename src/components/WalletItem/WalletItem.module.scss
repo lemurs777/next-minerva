@@ -1,0 +1,65 @@
+.wallet {
+	display: flex;
+	align-items: center;
+	gap: 32px 38px;
+	text-transform: uppercase;
+	font-weight: 500;
+	flex-wrap: wrap;
+
+	&__btn {
+		gap: 12px;
+
+		@media(any-hover:hover) {
+			&:hover {
+				.wallet__btnIcon {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		width: 68px;
+		height: 68px;
+		flex: 0 0 68px;
+		border-radius: 50%;
+		display: flex;
+		overflow: hidden;
+
+		img {
+			object-position: center;
+			object-fit: cover;
+		}
+	}
+
+	&__btnIcon {
+		transition: .2s ease-in-out;
+		color: #4857E6;
+		position: relative;
+
+		&::after {
+			content: '';
+			border-radius: 10px;
+			position: absolute;
+			top: calc(100% - 2px);
+			width: calc(100% - 4px);
+
+			height: 2px;
+			background-color: #B3B8F3;
+			left: 50%;
+			translate: -50% 0;
+		}
+	}
+
+	&__sum {
+		font-size: 32px;
+
+	}
+
+	&__btns {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		gap: 17px;
+	}
+}

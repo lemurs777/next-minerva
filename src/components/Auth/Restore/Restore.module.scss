@@ -1,0 +1,132 @@
+// .auth {
+// 	max-width: 646px;
+// 	width: 100%;
+// 	position: relative;
+
+// 	&__back {}
+
+// 	&__label {
+// 		position: absolute;
+// 		left: 50%;
+// 		padding: 33px;
+// 		top: 0;
+// 		translate: -50% 0%;
+// 		border-radius: 0px 0px 12px 12px;
+// 		background: var(--Button-gradient-1, linear-gradient(90deg, #4757E6 0%, #8E54E9 48.44%, #FA0A9A 100%));
+// 		box-shadow: 0px 5px 10px 0px rgba(149, 149, 149, 0.20);
+
+// 	}
+
+// 	&__inner {
+// 		border-radius: 24px;
+// 		padding: 26px 32px 85px;
+// 		border: 1px solid rgba(255, 255, 255, 0.80);
+// 		background: #FFF;
+// 		position: relative;
+// 		z-index: 1;
+// 		box-shadow: 0px 16px 39.4px -3px rgba(0, 0, 0, 0.15);
+// 	}
+
+// 	&::after {
+// 		transform-origin: bottom right;
+// 		position: absolute;
+// 		width: 85%;
+// 		height: 85%;
+// 		content: '';
+// 		bottom: 0;
+// 		right: 0;
+// 		border-radius: 24px;
+// 		border: 1px solid rgba(255, 255, 255, 0.80);
+// 		background: rgba(255, 255, 255, 0.18);
+// 		box-shadow: 0px 0px 39.4px -3px rgba(0, 0, 0, 0.15);
+// 		transform: rotate(-8.929deg);
+// 	}
+
+// 	&__body {
+// 		padding-top: 117px;
+// 		max-width: 355px;
+// 		margin: 0 auto;
+// 	}
+
+// 	&__icon {
+// 		margin-bottom: 31px;
+// 		display: flex;
+// 		justify-content: center;
+// 	}
+
+// 	&__items {
+// 		display: flex;
+// 		flex-direction: column;
+// 		gap: 28px;
+// 		justify-content: center;
+// 		text-align: center;
+// 	}
+
+// 	&__item {
+// 		color: var(--dark);
+// 		font-weight: 300;
+
+
+// 	}
+
+// 	a {
+// 		color: #0075FE;
+// 		text-decoration: underline;
+
+// 		@media(any-hover:hover) {
+// 			&:hover {
+// 				text-decoration: none;
+// 			}
+// 		}
+// 	}
+// }
+
+// .form {
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 28px;
+// 	margin-bottom: 28px;
+// 	overflow-y: auto;
+
+// 	&__name {
+// 		color: var(--black);
+// 		font-size: 16px;
+// 		font-style: normal;
+// 		font-weight: 700;
+// 		line-height: 75%;
+// 		letter-spacing: 0.02em;
+// 		text-align: center;
+
+// 		span {
+// 			font-weight: 400;
+// 		}
+// 	}
+
+// 	&__input {
+
+// 		input {
+// 			border-radius: 12px;
+// 			border: 1px solid var(--Stroke-Input, #B7B7B7);
+// 			border-radius: 12px;
+// 			padding: 16px;
+// 			text-align: center;
+// 			letter-spacing: 0.02em;
+// 			line-height: 75%;
+// 			width: 100%;
+
+// 			&::placeholder {
+// 				color: #C2C0C0;
+// 				font-style: italic;
+// 			}
+// 		}
+// 	}
+
+// 	&__checkbox {
+// 		font-size: 14px;
+// 		font-weight: 300;
+// 		display: flex;
+// 		align-items: center;
+// 		gap: 8px;
+// 		justify-content: center;
+// 	}
+// }

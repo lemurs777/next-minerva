@@ -1,0 +1,10 @@
+.title {
+	color: #303030;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	@media(max-width:767.98px) {
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,275 @@
+@import '../../assets/styles/helpers/mixins';
+
+.hero {
+	background: url('/images/hero-bg.png') center/cover no-repeat;
+	position: relative;
+	padding-top: 110px;
+	display: flex;
+
+
+	@media(min-width:1050px) {
+		height: 100vh;
+		max-height: 1080vh;
+
+	}
+
+	:global {
+		.container {
+			margin-top: auto;
+			// height: 100%;
+			position: relative;
+		}
+	}
+
+	&__text {
+		@media(max-width:767.98px) {
+			text-align: center;
+		}
+	}
+
+	&__inner {
+		margin-top: auto;
+		gap: 1.5rem;
+		display: flex;
+		position: relative;
+		z-index: 1;
+
+		@media(max-width:1049.98px) {
+			flex-direction: column;
+		}
+	}
+
+
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		max-width: 853px;
+
+		@media(max-width:767.98px) {
+			gap: 36px;
+		}
+	}
+
+	&__decor {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		aspect-ratio: 1/1;
+		left: 45px;
+
+		@media(min-width:1050px) {
+
+			width: 706px;
+			flex: 0 0 706px;
+		}
+
+		@media(max-width:1049px) {
+			left: 0;
+			max-width: 395px;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+
+		&::before {
+			position: absolute;
+			top: 200px;
+			left: 12%;
+			width: 84px;
+			height: 91px;
+			z-index: 5;
+			content: '';
+			background: url('../../images/decors/crystal.png') center/contain no-repeat;
+			animation: levitation 5s infinite linear;
+
+			@media(max-width:1049.98px) {
+				top: 28%;
+				left: 9%;
+				width: 60px;
+				height: 50px;
+			}
+		}
+
+		img {
+			position: relative;
+			z-index: 1;
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	&__title {
+		font-size: 64px;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		line-height: 100%;
+
+
+		@include adaptive-font(64, 24);
+
+		@media(max-width:767.98px) {
+			text-align: center;
+		}
+
+		span {
+			background: linear-gradient(89.5deg,
+					#4776e6 0.43%,
+					#8e54e9 15.06%,
+					#fa0a9a 30.64%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+	}
+
+	&__decors {
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		img {
+			position: absolute;
+			transition: .2s ease-in-out;
+			aspect-ratio: 1/1;
+
+			&:nth-child(1) {
+				top: calc(50% - 37px);
+				left: calc(50% - 37px);
+				width: 74px;
+
+				@media(max-width:767.98px) {
+					width: 31px;
+					top: 55%;
+					left: 15%;
+				}
+			}
+
+			&:nth-child(2) {
+				right: 50%;
+				bottom: -92px;
+				width: 184px;
+				rotate: -135deg;
+
+				@media(max-width:767.98px) {
+					width: 79px;
+					right: 80%;
+					bottom: -40px;
+				}
+			}
+
+			&:nth-child(3) {
+				top: 5%;
+				right: -290px;
+				width: 290px;
+
+				@media(max-width:767.98px) {
+					width: 62px;
+					right: -20px;
+					top: auto;
+					bottom: 25%;
+				}
+			}
+
+			&:nth-child(4) {
+				width: 140px;
+				height: 140px;
+				bottom: 110px;
+				left: -240px;
+				// translate: -100% -50%;
+			}
+		}
+	}
+
+	&__btns {
+		display: flex;
+		// align-items: center;
+		justify-content: center;
+		gap: 85px;
+
+		@media(min-width:1400px) {
+			height: 85px;
+		}
+
+		@media(max-width:1399.98px) {
+			gap: 20px;
+			justify-content: space-between;
+		}
+
+		@media(max-width:767.98px) {
+			justify-content: space-evenly;
+			gap: 10px;
+		}
+	}
+
+	&__btn {
+		text-transform: uppercase;
+
+		@media(max-width:1399.98px) {
+			font-size: 18px;
+		}
+
+		@media(max-width:767.98px) {
+			font-size: 1rem;
+		}
+	}
+}
+
+.btnBorderGradient {
+	height: inherit;
+	border-radius: 1.5rem;
+	padding: 1.5rem 3rem;
+	text-transform: uppercase;
+	font-size: 27px;
+	font-weight: 600;
+
+
+
+	@media(min-width:1400px) {
+		&::before {
+			border-radius: 1.5rem;
+		}
+	}
+
+
+	@media(max-width:1399.98px) {
+		font-size: 18px;
+		padding: 15px;
+	}
+
+	@media(max-width:767.98px) {
+		background-color: #fff;
+		border-radius: 12px;
+		font-size: 1rem;
+	}
+
+
+}
+
+@keyframes levitation {
+	0% {
+		translate: 0 0;
+	}
+
+	25% {
+		translate: 0 -20px;
+	}
+
+	50% {
+		translate: 0 0px;
+
+	}
+
+	75% {
+
+		translate: 0 20px;
+	}
+
+	100% {
+		translate: 0 0;
+	}
+}

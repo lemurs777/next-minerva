@@ -1,0 +1,73 @@
+.window {
+	position: relative;
+	border-radius: 24px;
+	border: 1px solid rgba(247, 247, 247, 0.00);
+	background: rgba(255, 255, 255, 0.70);
+	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(12.5px);
+	max-width: 1226px;
+	min-height: 80vh;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: center;
+
+	@media(min-width:1200px) {
+
+		&::after {
+			position: absolute;
+			right: 0;
+			top: 0;
+			content: '';
+			aspect-ratio: 1/1;
+			width: 336px;
+			background: url('../../images/decors/btc.svg') right top/contain no-repeat;
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 40px;
+
+		@media(max-width:767.98px) {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__head {
+		display: inline-flex;
+		border-radius: 0px 0px 12px 12px;
+		background: var(--Button-gradient-1, linear-gradient(90deg, #4757E6 0%, #8E54E9 48.44%, #FA0A9A 100%));
+		box-shadow: 0px 5px 10px 0px rgba(149, 149, 149, 0.20);
+		padding: 33px;
+		text-align: center;
+		justify-content: center;
+
+		@media(max-width:767.98px) {
+			padding: 22px;
+			width: calc(100% - 40px);
+		}
+	}
+
+	&__title {
+		@media(max-width:767.98px) {
+			font-size: 16px;
+		}
+	}
+
+	&__back {
+		position: absolute;
+		top: 26px;
+		left: 2rem;
+
+		@media(max-width:767.98px) {
+			display: none;
+		}
+	}
+
+	&__body {
+		padding: 0 15px 45px;
+	}
+
+	&__inner {}
+}

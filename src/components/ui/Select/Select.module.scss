@@ -1,0 +1,117 @@
+.select {
+	position: relative;
+	width: fit-content;
+	line-height: 1;
+	z-index: 2;
+
+	&__button {
+		border-radius: 12px;
+		padding: 0.875rem 1rem;
+		border: 1px solid var(--Stroke-Input, #B7B7B7);
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 18px;
+		font-weight: 300;
+		text-transform: uppercase;
+		padding-right: 38px;
+		position: relative;
+		width: 100%;
+
+		&::after {
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			translate: 0 -50%;
+			border: 0 solid transparent;
+			border-left-width: 6px;
+			border-right-width: 6px;
+			border-top: 12px solid #343434;
+			content: '';
+		}
+
+	}
+
+	&__buttonIcon {
+		width: 21px;
+		height: 21px;
+		flex: 0 0 21px;
+	}
+
+	&__menu {
+		position: absolute;
+		top: calc(100% + 10px);
+		min-width: 100%;
+		border-radius: 12px;
+		padding: 0.875rem 0;
+		border: 1px solid var(--Stroke-Input, #B7B7B7);
+		background-color: #fff;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+		transition: .2s ease-in-out;
+		translate: 0 -10px;
+
+		&.open {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+			translate: 0 0;
+		}
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+}
+
+.option {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	justify-content: space-between;
+	cursor: pointer;
+	padding: .25rem 1rem;
+
+	@media(any-hover:hover) {
+		&:hover {
+			box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	&__icon {
+		width: 21px;
+		height: 21px;
+		flex: 0 0 21px;
+	}
+
+	&.selected {
+		border: 1px solid rgba(247, 247, 247, 0.00);
+		background: rgba(255, 255, 255, 0.70);
+		box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+		backdrop-filter: blur(12.5px);
+
+		.option {
+			&__title {
+				font-weight: 700;
+
+			}
+		}
+	}
+}
+
+.label {
+	margin-bottom: 20px;
+	display: block;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+}

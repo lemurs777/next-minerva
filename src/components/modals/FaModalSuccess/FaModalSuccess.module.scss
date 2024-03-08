@@ -1,0 +1,37 @@
+.modal {
+	width: 100%;
+	max-width: 568px;
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 110px;
+		aspect-ratio: 1/1;
+
+		img {
+			width: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+	}
+
+	&__title {
+		text-align: center;
+
+		@media(min-width:768px) {
+			white-space: nowrap;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		gap: 31px;
+		flex-direction: column;
+		max-width: 355px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}

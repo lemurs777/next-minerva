@@ -1,0 +1,74 @@
+.profile {
+	border-radius: 12px;
+	border: 1px solid rgba(247, 247, 247, 0.00);
+	background: rgba(255, 255, 255, 0.42);
+	box-shadow: 0px 1px 8px 5px rgba(212, 212, 212, 0.25);
+	backdrop-filter: blur(12.5px);
+	padding: 27px 23px 59px;
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+	align-items: center;
+
+	@media(min-width:768px) {
+		max-width: 257px;
+	}
+
+	&__top {
+		@media(max-width:767.98px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 50px;
+		}
+	}
+
+	&__topBtns {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 17px;
+	}
+
+	&__avatar {
+		width: 148px;
+		height: 148px;
+		flex: 0 0 148px;
+		border-radius: 50%;
+		display: flex;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-position: center;
+			object-fit: cover;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@media(max-width:767.98px) {
+			align-items: center;
+		}
+	}
+}
+
+.item {
+	padding-left: 20px;
+	cursor: pointer;
+	position: relative;
+
+	&:hover,
+	&.active {
+		&::before {
+			position: absolute;
+			top: 50%;
+			translate: 0 -50%;
+			left: 0;
+			content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M13 8.5L1.75 14.9952L1.75 2.00481L13 8.5Z" fill="url(%23paint0_linear_164_1894)"/><defs>	<linearGradient id="paint0_linear_164_1894" x1="-2" y1="5.5" x2="15" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="%234757E6"/><stop offset="0.484375" stop-color="%238E54E9"/><stop offset="1" stop-color="%23FA0A9A"/></linearGradient></defs></svg>');
+		}
+	}
+}

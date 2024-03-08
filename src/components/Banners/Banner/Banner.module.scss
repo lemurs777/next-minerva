@@ -1,0 +1,158 @@
+.banner {
+	background: linear-gradient(180deg, #0e162c 0%, #141b35 51.8%, #1e2646 100%);
+	max-width: 1460px;
+	margin-inline: auto;
+	box-shadow: 0px 0px 127px 6px rgba(0, 0, 0, 0.25);
+	border-radius: 24px;
+	overflow: hidden;
+
+	@media(max-width:991.98px) {
+		border-radius: 40px;
+		background: linear-gradient(0deg, #0E162C 48.96%, #141B35 75.25%, #1E2646 99.72%);
+	}
+
+	&__inner {
+		display: flex;
+		max-width: 1300px;
+		margin-inline: auto;
+		gap: 120px;
+		align-items: center;
+
+		@media(min-width:1300px) {}
+
+		@media(max-width:1299.98px) {
+			gap: 0;
+		}
+
+		@media(max-width:991.98px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__content {
+		max-width: 730px;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		padding: 47px;
+
+		@media(max-width:991.98px) {
+			text-align: center;
+			align-items: center;
+			gap: 47px;
+		}
+	}
+
+	&__title {
+		color: #b4d1ec;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 100%;
+		letter-spacing: 0.02em;
+
+		@media(max-width:767.98px) {
+			font-size: 24px;
+			max-width: 202px;
+		}
+
+		span {
+			&:first-child {
+				color: #8254e8;
+			}
+
+			&:last-child {
+				color: #fa0b9a;
+			}
+		}
+	}
+
+	&__list {
+		list-style: disc;
+		line-height: 1.25em;
+		display: flex;
+		flex-direction: column;
+		padding-left: 35px;
+		font-weight: 300;
+		color: #fff;
+
+		@media(max-width:991.98px) {
+			align-items: center;
+			padding-left: 0;
+			gap: 10px;
+		}
+
+		li {
+			font-size: 1.5rem;
+			position: relative;
+			line-height: normal;
+
+			&::before,
+			&::after {
+				position: absolute;
+				top: 50%;
+				content: '';
+				width: 7px;
+				flex: 0 0 7px;
+				height: 7px;
+				display: none;
+				translate: 0 -50%;
+				border-radius: 50%;
+				background-image: linear-gradient(90deg, #4757E6 0%, #8E54E9 62.25%, #FA0A9A 121.43%);
+			}
+
+			&::before {
+				left: 0;
+			}
+
+			&::after {
+				right: 0;
+			}
+
+			&::marker {
+				font-size: 1rem;
+
+			}
+
+			@media(max-width:991.98px) {
+				list-style: none;
+				padding: 0 19px;
+				width: fit-content;
+
+				span {
+					display: none;
+				}
+
+				&::before,
+				&::after {
+					display: block;
+				}
+			}
+
+			@media(max-width:767.98px) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	&__img {
+		width: 436px;
+		flex: 0 0 436px;
+
+		@media(max-width:767.98px) {
+			width: 100%;
+			flex: 1;
+		}
+
+		img {
+			aspect-ratio: 1/1;
+			height: 100%;
+		}
+	}
+
+	&__btn {
+		@media(max-width:767.98px) {
+			font-weight: 400 !important;
+		}
+	}
+}

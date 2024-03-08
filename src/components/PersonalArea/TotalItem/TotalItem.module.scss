@@ -1,0 +1,45 @@
+.total {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	justify-content: space-between;
+
+	&__icon {
+		width: 80px;
+		height: 80px;
+		flex: 0 0 80px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__title {
+		font-size: 20px;
+		color: #303030;
+
+		@media(max-width:767.98px) {
+			font-size: 18px;
+		}
+	}
+
+	&__sum {
+		font-size: 2rem;
+	}
+
+	&:nth-child(odd) {
+		text-align: right;
+	}
+
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+
+	&:last-child {
+		order: -1;
+	}
+}

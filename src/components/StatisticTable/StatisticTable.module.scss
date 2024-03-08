@@ -1,0 +1,44 @@
+.statistics {
+	&__header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 62px;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+
+		@media(max-width:767.98px) {
+			justify-content: center;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		align-items: center;
+		gap: 37px;
+		flex-wrap: wrap;
+
+		@media(max-width:1199.98px) {
+			gap: 13px;
+		}
+
+		@media(max-width:767.98px) {
+			justify-content: center;
+		}
+	}
+
+	&__body {
+		height: 350px;
+		overflow-y: auto;
+		margin-bottom: 36px;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.title {
+	// text-align: center;
+}

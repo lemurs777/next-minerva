@@ -1,0 +1,158 @@
+.advantages {
+	&__head {
+		text-align: center;
+		margin: 0 auto 78px;
+		max-width: 711px;
+
+		@media(max-width:767.98px) {
+			margin-bottom: 49px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 47px;
+	}
+
+	&__text {
+		font-weight: 300;
+		color: var(--black);
+
+		@media(min-width:768px) {
+
+			font-size: 24px;
+		}
+	}
+
+	&__body {
+		@media(min-width:768px) {
+			padding: 80px 0;
+		}
+	}
+
+	&__block {
+		padding: 62px 75px;
+		max-width: 1470px;
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+		border-radius: 81px;
+
+		@media(min-width:768px) {
+			overflow: hidden;
+			box-shadow: 4px 4px 23.3px 4px rgba(0, 0, 0, 0.5);
+			height: 675px;
+
+		}
+
+		@media(max-width:991.98px) {
+			padding: 20px;
+			border-radius: 40px;
+		}
+
+		@media(max-width:767.98px) {
+			padding: 0;
+		}
+
+		video {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			translate: -50% -50%;
+			max-width: none;
+			height: 100%;
+
+			@media(max-width:767.98px) {
+				display: none;
+			}
+		}
+	}
+
+	&__list {
+		height: 100%;
+		display: grid;
+		justify-content: space-between;
+		gap: 26px;
+
+		@media(min-width:768px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 47px;
+
+		}
+	}
+}
+
+.item {
+	max-width: 367px;
+	min-height: 134px;
+	background: rgba(255, 255, 255, 0.81);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	box-shadow: -24px 0px 39.4px -3px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(7.5px);
+	/* Note: backdrop-filter has minimal browser support */
+	border-radius: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 30px;
+	gap: 15px;
+
+	@media(max-width:767.98px) {
+		border: 1px solid rgba(255, 255, 255, 0.80);
+		background: rgba(255, 255, 255, 0.50);
+		box-shadow: -24px 0px 39.4px -3px rgba(0, 0, 0, 0.05);
+		padding: 30px 20px;
+		width: 100%;
+		gap: 5px;
+
+	}
+
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+		text-align: right;
+		margin-left: auto;
+
+	}
+
+	&:nth-child(1) {
+		.item {
+			&__icon {
+				flex: 0 0 107px;
+			}
+		}
+	}
+
+	&:nth-child(1),
+	&:nth-child(15) {
+
+		@media(min-width:992px) {
+			margin-left: 59px;
+
+		}
+	}
+
+	&:nth-child(2),
+	&:nth-child(6) {
+		@media(min-width:992px) {
+			margin-right: 59px;
+
+		}
+	}
+
+	&__content {
+		@media(min-width:768px) {
+			max-width: 201px;
+
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		color: var(--black);
+		font-weight: 500;
+		margin-bottom: 14px;
+	}
+
+	&__icon {
+		flex: 0 0 70px;
+	}
+}

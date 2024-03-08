@@ -1,0 +1,79 @@
+.link {
+	&::before {
+		line-height: 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		flex: 0 0 1.5rem;
+		content: '';
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&--dashboard {
+		&::before {
+			background-image: url('../../../images/icons/dashboard.svg');
+		}
+	}
+
+	&--wallets {
+		&::before {
+			background-image: url('../../../images/icons/wallet.svg');
+		}
+	}
+
+	&--investments {
+		&::before {
+			background-image: url('../../../images/icons/invest.svg');
+		}
+	}
+
+	&--statistics {
+		&::before {
+			background-image: url('../../../images/icons/stat.svg');
+		}
+	}
+
+	&--affiliate-program {
+		&::before {
+			background-image: url('../../../images/icons/people.svg');
+		}
+	}
+
+	@media(any-hover:hover) {
+		&:hover {
+			&.link--dashboard {
+				&::before {
+					background-image: url('../../../images/icons/dashboard-active.svg');
+				}
+			}
+
+			&.link--wallets {
+				&::before {
+					background-image: url('../../../images/icons/wallet-active.svg');
+				}
+			}
+
+			&.link--investments {
+				&::before {
+					background-image: url('../../../images/icons/invest-active.svg');
+				}
+			}
+
+			&.link--statistics {
+				&::before {
+					background-image: url('../../../images/icons/stat-active.svg');
+				}
+			}
+
+			&.link--affiliate-program {
+				&::before {
+					background-image: ('../../../images/icons/people-active.svg');
+				}
+			}
+		}
+	}
+}

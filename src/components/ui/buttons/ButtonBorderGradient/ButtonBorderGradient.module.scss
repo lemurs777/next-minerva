@@ -1,0 +1,103 @@
+.btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 1rem;
+	height: 51px;
+	line-height: 1;
+	transition: .2s ease-in-out;
+	border-radius: 12px;
+	box-shadow: 0px 5px 10px 0px rgba(149, 149, 149, 0.20);
+	background: linear-gradient(to right, transparent, transparent 50%, #4757e6 50%, #8E54E9 75%, #F90B9A 100%);
+	background-size: 200% auto;
+
+	@media(max-width:767.98px) {
+		font-size: 1rem;
+		padding: 15px;
+	}
+
+	&::before {
+		box-shadow: 0px 5px 10px 0px rgba(149, 149, 149, 0.20);
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: 100%;
+		padding: 3px;
+		border-radius: 12px;
+		content: '';
+		background: linear-gradient(to right, #4757e6, #8E54E9 50%, #F90B9A 100%);
+		-webkit-mask: linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+	}
+
+	span {
+		transition: .3s ease-in-out;
+	}
+
+	.gradient {
+		text-transform: uppercase;
+		background: linear-gradient(90deg, #4776e6 0%, #8e54e9 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		font-weight: 500;
+	}
+
+	.dark {
+		color: #000;
+	}
+
+	@media(any-hover:hover) {
+		&:hover {
+			background-position: right center;
+
+			svg {
+				fill: var(--light);
+			}
+
+			span {
+				-webkit-text-fill-color: var(--light);
+				color: var(--light);
+			}
+		}
+	}
+
+	&.secondary {
+		max-width: 355px;
+		width: 100%;
+		background: linear-gradient(to right, transparent, transparent 50%, #4776E6 50%, #8E54E9 75%, #BB0AFA 100%);
+		background-size: 200% auto;
+
+		span {
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 100%;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			// background: linear-gradient(90deg, var(--electric-violet));
+		}
+
+		&::before {
+			background: linear-gradient(to right, #4776E6, #8E54E9, #BB0AFA);
+		}
+
+		@media(any-hover:hover) {
+			&:hover {
+				background-position: right center;
+
+				span {
+					-webkit-text-fill-color: var(--light);
+					color: var(--light);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.table {
+
+	table {
+		width: 100%;
+	}
+
+	tbody {}
+
+	td {
+		border-bottom: 1px solid #E6E6E6;
+	}
+
+	td,
+	th {
+		white-space: nowrap;
+		text-align: center;
+		padding: 1em .5em;
+		font-size: 18px;
+		font-weight: 300;
+		text-transform: uppercase;
+
+		@media(max-width:767.98px) {
+			padding: 0.875rem 0.5em;
+		}
+
+		&:first-child {
+			text-align: left;
+		}
+
+		&:last-child {
+			text-align: right;
+		}
+	}
+
+	th {}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__status {
+		color: red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&.success {
+			color: #26A17B;
+		}
+	}
+}

@@ -1,0 +1,143 @@
+.table {
+	padding: 75px 70px;
+	border-radius: 12px;
+	border: 1px solid rgba(247, 247, 247, 0.00);
+	background: rgba(255, 255, 255, 0.42);
+	box-shadow: 0px 1px 8px 5px rgba(212, 212, 212, 0.25);
+	backdrop-filter: blur(12.5px);
+	min-height: 670px;
+	display: flex;
+	flex-direction: column;
+	gap: 52px;
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+	}
+
+	@media(max-width:1350px) {
+		padding: 2rem;
+	}
+
+	@media(max-width:991.98px) {
+		padding: 30px 16px;
+	}
+
+	&__lvls {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+
+		@media(max-width:1350px) {
+			gap: 1rem;
+		}
+
+		@media(max-width:991.98px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__lvl {
+		padding: 14px;
+		text-transform: uppercase;
+		font-size: 18px;
+		border-radius: 12px;
+		border: 1px solid #E5E5E5;
+		position: relative;
+
+		@media(max-width:767.98px) {
+			font-size: 16px;
+		}
+
+		&.active {
+			&::before {
+				box-shadow: 0px 5px 10px 0px rgba(149, 149, 149, 0.20);
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+				height: 100%;
+				padding: 2px;
+				border-radius: 12px;
+				content: '';
+				background: linear-gradient(to right, #4757e6, #8E54E9 50%, #F90B9A 100%);
+				-webkit-mask: linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+			}
+		}
+	}
+
+	&__body {
+		flex: 1;
+
+		@media(max-width:767.98px) {
+			width: calc(100vw - 64px);
+			overflow-x: auto;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: #797979;
+		text-align: center;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	table {
+		width: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		color: #000;
+		white-space: nowrap;
+
+		th {
+			font-size: 18px;
+			font-weight: 400;
+			padding: 0 10px 19px;
+		}
+
+		td {
+			padding: 19px 0;
+			font-size: 16px;
+			font-weight: 300;
+		}
+	}
+}
+
+// .pagination {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+
+// 	&__fragment {
+// 		margin-right: 36px;
+// 	}
+
+// 	&__buttons {
+// 		display: flex;
+// 		align-items: center;
+// 		gap: 20px;
+// 	}
+
+// 	&__button {
+// 		border-radius: 12px;
+// 		border: 1px solid #E5E5E5;
+// 		padding: 14px;
+// 		color: #494949;
+
+// 		&:first-child {
+// 			rotate: 180deg;
+// 		}
+
+// 		&.disabled {
+// 			color: #CFCFCF;
+// 		}
+// 	}
+// }

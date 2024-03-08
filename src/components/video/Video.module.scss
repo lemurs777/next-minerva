@@ -1,0 +1,26 @@
+.video {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 706px;
+	height: 402px;
+
+	background: rgba(255, 255, 255, 0.38);
+	border: 1px solid rgba(230, 230, 230, 0.8);
+	box-shadow: 0px 0px 127px -1px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.4px);
+	/* Note: backdrop-filter has minimal browser support */
+	border-radius: 24px;
+
+	@media(max-width:1199.98px) {
+		width: 100%;
+		aspect-ratio: 16/9;
+		height: auto;
+
+		&__play {
+			aspect-ratio: 1/1;
+			width: 79px;
+		}
+	}
+
+}
