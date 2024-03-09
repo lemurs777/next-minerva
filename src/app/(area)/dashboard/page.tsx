@@ -8,43 +8,25 @@ const DashboardPage = () => {
 	return (
 		<div className='dashboard page-content'>
 			<div className="container">
-				{/* <div className="dashboard__grid"> */}
 				<div className="row">
 					<div className="dashboard__grid">
 						<div className="dashboard__aside">
 							<StatusUser />
-							{/* <NewInvestmentActivation /> */}
-							{/* <Basic /> */}
 						</div>
 						<div className="dashboard__main">
 							<BalanceDynamic />
-							{/* <LatestActivities /> */}
-
 						</div>
 					</div>
-					<div className="dashboard__grid">
+					<div className="dashboard__grid dashboard__grid--table">
 						<div className="dashboard__aside">
-							{/* <StatusUser /> */}
 							<NewInvestmentActivation />
-							{/* <Basic /> */}
 						</div>
 						<div className="dashboard__main">
-							{/* <BalanceDynamic /> */}
 							<LatestActivities />
-
 						</div>
 					</div>
-					<div className="dashboard__grid">
-						<div className="dashboard__aside">
-							{/* <StatusUser /> */}
-							{/* <NewInvestmentActivation /> */}
-							<Basic />
-						</div>
-						<div className="dashboard__main">
-							{/* <BalanceDynamic /> */}
-							{/* <LatestActivities /> */}
-
-						</div>
+					<div className="dashboard__grid dashboard__grid--basic">
+						<Basic />
 					</div>
 				</div>
 			</div>

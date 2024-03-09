@@ -7,42 +7,49 @@ import decorSmImg from '@/images/decors/ball-1.png'
 import decorLgImg from '@/images/decors/ball-2.png'
 import styles from './Hero.module.scss'
 import ButtonBorderGradient from '../ui/buttons/ButtonBorderGradient'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+
+import { MouseParallax, ScrollParallax } from "react-just-parallax"
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 const Hero = () => {
-	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+	// const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 	const breakpoints = {
 		isLg: useMediaQuery("(max-width: 1399.98px)"),
 		isMd: useMediaQuery("(max-width: 1049.98px)"),
 		isMobile: useMediaQuery("(max-width: 767.98px)"),
 		active: "SSR",
 	}
-	useEffect(() => {
-		const handleMouseMove = (e: any) => {
-			setMousePosition({ x: e.clientX, y: e.clientY })
-		}
+	// useEffect(() => {
+	// 	const handleMouseMove = (e: any) => {
+	// 		setMousePosition({ x: e.clientX, y: e.clientY })
+	// 	}
 
-		window.addEventListener('mousemove', handleMouseMove)
+	// 	window.addEventListener('mousemove', handleMouseMove)
 
-		return () => {
-			window.removeEventListener('mousemove', handleMouseMove)
-		}
-	}, [])
+	// 	return () => {
+	// 		window.removeEventListener('mousemove', handleMouseMove)
+	// 	}
+	// }, [])
 
-	const calculateParallaxOffset = (factor: any) => {
-		const offsetX = mousePosition.x / factor
-		const offsetY = mousePosition.y / factor
-		return { transform: `translate(${offsetX}px, ${offsetY}px)` }
-	}
+	// const calculateParallaxOffset = (factor: any) => {
+	// 	const offsetX = mousePosition.x / factor
+	// 	const offsetY = mousePosition.y / factor
+	// 	return { transform: `translate(${offsetX}px, ${offsetY}px)` }
+	// }
 	return (
 		<div className={styles.hero}>
 			<div className='container'>
-				<div className={styles.hero__decors}>
+				<div className={styles.hero__decors} >
+					<MouseParallax isAbsolutelyPositioned={true} strength={0.01}>
 
-					<Image src={decorSmImg} alt={'decor'} style={calculateParallaxOffset(15)} />
-					<Image src={decorSmImg} alt={'decor'} style={calculateParallaxOffset(20)} />
-					<Image src={decorLgImg} alt={'decor'} style={calculateParallaxOffset(25)} />
-					<Image src={decorLgImg} alt={'decor'} style={calculateParallaxOffset(15)} />
+						<Image src={decorSmImg} alt={'decor'} />
+					</MouseParallax>
+					<MouseParallax strength={0.01} isAbsolutelyPositioned={true}>
+						<Image src={decorSmImg} alt={'decor'} /></MouseParallax>
+					<MouseParallax strength={0.05} lerpEase={0.1} isAbsolutelyPositioned={true}>
+						<Image src={decorLgImg} alt={'decor'} /></MouseParallax>
+					<MouseParallax strength={0.03} isAbsolutelyPositioned={true}>
+						<Image src={decorLgImg} alt={'decor'} /></MouseParallax>
 				</div>
 				<div className={styles.hero__inner}>
 					<div className={styles.hero__content}>

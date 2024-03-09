@@ -209,6 +209,10 @@
 	flex-direction: column;
 	gap: 20px;
 	align-items: flex-end;
+
+	.label {
+		margin-bottom: 0;
+	}
 }
 
 .label {

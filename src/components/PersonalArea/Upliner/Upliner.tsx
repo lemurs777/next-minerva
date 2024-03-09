@@ -28,13 +28,12 @@ const Upliner = () => {
 		],
 	}
 	const option = {
+		// responsive: false,
+
 		plugins: {
 			legend: {
 				position: "right",
 
-			},
-			xaxis: {
-				position: 'left'
 			}
 		},
 		// responsive: false,
@@ -71,7 +70,9 @@ const Upliner = () => {
 			</TabList>
 			<div className={styles.tabs__body}>
 				<TabPanel className={styles.tabs__panel}>
+
 					<DouChart data={data} option={option} className={styles.douChart} />
+
 				</TabPanel>
 				<TabPanel className={styles.tabs__panel}>
 					<CustomColumnChart />

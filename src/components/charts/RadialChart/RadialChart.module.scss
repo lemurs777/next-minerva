@@ -1,3 +1,7 @@
 .chart {
 	color: #243465;
+
+	@media(min-width:1400px) {
+		margin-right: -30px;
+	}
 }

@@ -22,35 +22,32 @@
 		bottom: 4px;
 		left: 50%;
 		translate: -50% 0;
-		aspect-ratio: 1/1;
-		flex: 0 0 67px;
-		width: 67px;
+		width: 68px;
+		overflow: hidden;
+		height: 68px;
 		border-radius: 50%;
 		color: #FFF;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 24px;
-		font-style: normal;
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		// font-style: normal;
+		// line-height: normal;
+		// text-transform: uppercase;
+
+		// span {
 		font-weight: 700;
-		line-height: normal;
-		text-transform: uppercase;
+		font-size: 24px;
+		// position: relative;
+		z-index: 1;
+		line-height: 1;
 
+		// }
 		span {
-			position: relative;
-			z-index: 1;
-			line-height: 1;
+			display: block;
+			line-height: 58%;
 		}
 
-		&::before {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			content: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none"><circle cx="34.1838" cy="33.8088" r="33.8088" fill="url(%23paint0_linear_584_1600)" /> <defs> <linearGradient id="paint0_linear_584_1600" x1="0.374999" y1="51.6701" x2="67.9927" y2="14.0339" gradientUnits="userSpaceOnUse" > <stop stop-color="%234757E6" /> <stop offset="0.535" stop-color="%238E54E9" /> <stop offset="1" stop-color="%23FA0AC5" /> </linearGradient> </defs> </svg>');
-
-		}
+		background: linear-gradient(61deg, #4757E6 8.43%, #8E54E9 53.45%, #FA0AC5 92.58%);
 	}
 
 	&__menu {

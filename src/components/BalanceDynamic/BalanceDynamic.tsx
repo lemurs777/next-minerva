@@ -7,8 +7,11 @@ import InfoIcon from '../icons/InfoIcon'
 import CustomTooltip from '../ui/CustomTooltip'
 import styles from './BalanceDynamic.module.scss'
 import { ApexOptions } from 'apexcharts'
+import clsx from 'clsx'
+import { useState } from 'react'
 
 const BalanceDynamic = () => {
+	const [activeTab, setActiveTab] = useState(0)
 	const series = [{
 		name: "Desktops",
 		data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
@@ -183,29 +186,32 @@ const BalanceDynamic = () => {
 			categories: ['Monday ', 'Tuesday ', 'Wednesday ', 'Thursday ', 'Friday', 'Saturday ', 'Sunday '],
 		}
 	}
+	const tabBtns = ['all', 'month', 'week']
 	return <Frame className={styles.balance}
 	>
 		<div className={styles.balance__header}>
-			<TableTitle title='balance dynamics' />
+			<TableTitle className={styles.title} title='balance dynamics' />
+			<div className={styles.tabs} >
+				<ul className={styles.tabs__list} >
+					{tabBtns.map((btn, index) => (
 
+						<button onClick={() => setActiveTab(index)} key={index} className={clsx(activeTab === index && styles.active, styles.tabs__btn)}>{btn}</button>
+					))}
+
+				</ul>
+
+			</div>
 			<CustomTooltip id={'balance'} content={'balance dynamics'} icon={'i'} classNameIcon={styles.tooltipIcon} />
 		</div>
-		<Tabs className={styles.tabs}>
-			<TabList className={styles.tabs__list} >
-				<Tab classID='all' selectedClassName={styles.active} className={styles.tabs__btn}>all</Tab>
-				<Tab classID='month' selectedClassName={styles.active} className={styles.tabs__btn}>month</Tab>
-				<Tab classID='days' selectedClassName={styles.active} className={styles.tabs__btn}>week</Tab>
-			</TabList>
-			<TabPanel classID='all'>
-				<CustomLineChart options={options} series={series} />
-			</TabPanel>
-			<TabPanel classID='month'>
-				<CustomLineChart options={options2} series={series2} />
-			</TabPanel>
-			<TabPanel classID='days'>
-				<CustomLineChart options={options3} series={series3} />
-			</TabPanel>
-		</Tabs>
+
+		<div className={styles.tabPanel}>
+			{activeTab === 0 && (<CustomLineChart options={options} series={series} />
+			)}
+			{activeTab === 1 && (<CustomLineChart options={options2} series={series2} />
+			)}
+			{activeTab === 2 && (<CustomLineChart options={options3} series={series3} />
+			)}
+		</div>
 	</Frame>
 }
 

@@ -11,10 +11,10 @@ const TransferModal = ({ showModal }: Props) => {
 
 	return <ModalWindow showModal={showModal} title={'transfer to wallets'}>
 		<div className={styles.modal}>
-			<div className={styles.modal__text}>
-				<p>Select a cryptocurrency, fill out the remaining fields to transfer the available amount from your bonus balance to wallet</p>
-			</div>
 			<form className={styles.form}>
+				<div className={styles.modal__text}>
+					<p>Select a cryptocurrency, fill out the remaining fields to transfer the available amount from your bonus balance to wallet</p>
+				</div>
 				<div className={styles.form__input}>
 					<CurrencySelect currencies={currency} placeholder={'Currency'} />
 				</div>

@@ -23,13 +23,9 @@ const Wallets = () => {
 				// 	<div className={styles.wallet__icon}><Image width={22} height={22} src={wallet.icon} alt={wallet.title} /></div>
 				// 	<div className={styles.wallet__title}>{wallet.title}</div>
 				// </button>
-				<label key={wallet.id} onClick={() => {
-					setChecked(wallet.id)
-				}}
-					className={clsx(checked === wallet.id ? styles.active : '', styles.wallet)}>
-					<input type="radio" name={'wallets'} />
-					<div className={styles.wallet__icon}><Image width={22} height={22} src={wallet.icon} alt={wallet.title} /></div>
-					<div className={styles.wallet__title}>{wallet.title}</div>
+				<label key={wallet.id}
+					className={styles.wallet}>
+					<input type="text" placeholder={wallet.title} />
 				</label>
 			))}
 		</div>

@@ -110,14 +110,11 @@ const RadialChart = () => {
 	const series = [45]
 	const options: ApexOptions = {
 		chart: {
-			// height: 350,
-			// width: 170,
-			// type: 'radialBar',
+
 		},
 		plotOptions: {
 
 			radialBar: {
-				offsetX: 50,
 				hollow: {
 					size: '70%',
 				},
@@ -175,12 +172,23 @@ const RadialChart = () => {
 		xaxis: {
 
 			position: 'center'
+		},
+		responsive: [{
+			breakpoint: 1400,
+
+			options: {
+				chart: {
+					width: 150
+				},
+			}
 		}
+
+		]
 	}
 
 
 	return <div className={styles.chart}>
-		<ReactApexChart options={options} series={series} type="radialBar" height={200} width={'100%'} />
+		<ReactApexChart options={options} series={series} type="radialBar" height={200} width={200} />
 	</div>
 }
 
