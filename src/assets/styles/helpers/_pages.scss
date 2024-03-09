@@ -70,8 +70,13 @@
 		}
 
 		&--table {
-			.dashboard__main {
-				overflow-x: auto;
+			@media(max-width:767.98px) {
+
+				.dashboard__main {
+					overflow-x: auto;
+					padding: 15px;
+					margin: -15px;
+				}
 			}
 		}
 	}

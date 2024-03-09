@@ -20,7 +20,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
-		max-width: 284px;
+		width: 100%;
+		max-width: 300px;
 		margin: 0 auto 39px;
 
 	}
@@ -54,6 +55,7 @@
 
 .checkbox {
 	label {
+		gap: 1rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

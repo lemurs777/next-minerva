@@ -1,7 +1,11 @@
 .container {
 	max-width: 1790px;
 	margin-inline: auto;
-	padding: 0 15px;
+	padding: 0 30px;
+
+	@media(max-width:767.98px) {
+		padding: 0 15px;
+	}
 }
 
 .btn-gradient {
@@ -83,8 +87,16 @@
 }
 
 .gradient-text {
-	background: var(--Button-gradient-1, linear-gradient(90deg, #4757E6 0%, #8E54E9 48.44%, #FA0A9A 100%));
-	background-clip: text;
+	-webkit-linear-gradient: linear-gradient(90deg,
+			#4757e6 0%,
+			#8e54e9 48.44%,
+			#fa0a9a 100%);
 	-webkit-background-clip: text;
+	background: linear-gradient(90deg,
+			#4757e6 0%,
+			#8e54e9 48.44%,
+			#fa0a9a 100%);
 	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
 }

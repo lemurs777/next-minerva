@@ -72,11 +72,14 @@ const Hero = () => {
 					</div>
 					<div className={styles.hero__decor}>
 						{breakpoints.isMd ? (
-							<Image src={decorImgMobile} alt='decor' />
-
+							<div className={styles.hero__decorImg}>
+								<Image src={decorImgMobile} alt='decor' />
+							</div>
 						) : (
 
-							<Image src={decorImg} alt='decor' priority />
+							<div className={styles.hero__decorImg}>
+								<Image src={decorImg} alt='decor' priority />
+							</div>
 						)}
 					</div>
 				</div>

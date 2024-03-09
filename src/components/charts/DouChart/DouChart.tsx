@@ -40,7 +40,7 @@ const DouChart = ({ data, option, className }: Props) => {
 	}
 	return <div className={clsx(className, styles.chart)}>
 
-		<Doughnut data={data} options={option ? option : options} />
+		<Doughnut className='chart' data={data} options={option ? option : options} />
 	</div>
 }
 

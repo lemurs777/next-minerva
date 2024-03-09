@@ -33,8 +33,11 @@ const Upliner = () => {
 		plugins: {
 			legend: {
 				position: "right",
+				labels: {
+					// padding: 50
+				}
+			},
 
-			}
 		},
 		// responsive: false,
 		maintainAspectRatio: false,

@@ -42,6 +42,18 @@
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+			-webkit-linear-gradient: linear-gradient(90deg,
+					#4757e6 0%,
+					#8e54e9 48.44%,
+					#fa0a9a 100%);
+			-webkit-background-clip: text;
+			background: linear-gradient(90deg,
+					#4757e6 0%,
+					#8e54e9 48.44%,
+					#fa0a9a 100%);
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
 		}
 
 		font-size: 36px;

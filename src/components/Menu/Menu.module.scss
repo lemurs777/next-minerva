@@ -150,6 +150,9 @@
 			font-weight: 700;
 			line-height: 231.25%;
 			text-transform: uppercase;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
 		}
 	}
 }
