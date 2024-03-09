@@ -30,6 +30,7 @@
 
 		@media(max-width:767.98px) {
 			text-align: center;
+			font-size: 1rem;
 		}
 	}
 
@@ -70,6 +71,12 @@
 
 	&__decorImg {
 		position: relative;
+		display: flex;
+
+		@media(min-width:992pxx) {
+			margin-top: auto;
+
+		}
 
 		&::before {
 			position: absolute;
@@ -110,12 +117,13 @@
 		justify-content: flex-end;
 		position: relative;
 		// left: 45px;
-
+		max-width: 50%;
+		aspect-ratio: 0.75/1;
 
 		@media(min-width:1050px) {
 
-			width: 706px;
-			flex: 0 0 706px;
+			// width: 706px;
+			// flex: 0 0 706px;
 		}
 
 		@media(max-width:1399px) {
@@ -130,6 +138,7 @@
 			max-width: 395px;
 			margin: 0 auto;
 			width: 100%;
+			flex: none;
 
 		}
 
@@ -139,8 +148,9 @@
 		img {
 			position: relative;
 			z-index: 1;
-			height: 100%;
-			width: auto;
+			// height: 100%;
+			// width: auto;
+
 		}
 	}
 
