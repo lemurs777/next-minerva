@@ -19,23 +19,7 @@ const Hero = () => {
 		isMobile: useMediaQuery("(max-width: 767.98px)"),
 		active: "SSR",
 	}
-	// useEffect(() => {
-	// 	const handleMouseMove = (e: any) => {
-	// 		setMousePosition({ x: e.clientX, y: e.clientY })
-	// 	}
 
-	// 	window.addEventListener('mousemove', handleMouseMove)
-
-	// 	return () => {
-	// 		window.removeEventListener('mousemove', handleMouseMove)
-	// 	}
-	// }, [])
-
-	// const calculateParallaxOffset = (factor: any) => {
-	// 	const offsetX = mousePosition.x / factor
-	// 	const offsetY = mousePosition.y / factor
-	// 	return { transform: `translate(${offsetX}px, ${offsetY}px)` }
-	// }
 	return (
 		<div className={styles.hero}>
 			<div className='container'>

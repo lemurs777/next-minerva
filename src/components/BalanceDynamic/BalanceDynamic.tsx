@@ -194,12 +194,9 @@ const BalanceDynamic = () => {
 			<div className={styles.tabs} >
 				<ul className={styles.tabs__list} >
 					{tabBtns.map((btn, index) => (
-
 						<button onClick={() => setActiveTab(index)} key={index} className={clsx(activeTab === index && styles.active, styles.tabs__btn)}>{btn}</button>
 					))}
-
 				</ul>
-
 			</div>
 			<CustomTooltip id={'balance'} content={'balance dynamics'} icon={'i'} classNameIcon={styles.tooltipIcon} />
 		</div>

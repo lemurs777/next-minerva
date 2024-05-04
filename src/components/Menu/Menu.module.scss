@@ -32,8 +32,8 @@
 	&__list {
 		display: flex;
 		align-items: center;
-
-		gap: 36px;
+		flex-wrap: wrap;
+		gap:.5rem 36px;
 
 		@media(max-width:1150px) {
 			gap: 36px 1rem;

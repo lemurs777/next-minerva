@@ -34,6 +34,7 @@ const AllPage = () => {
 					<li ><Link href={'/profile'} className='btn-gradient'>Profile</Link></li>
 					<li ><Link href={'/replenishment'} className='btn-gradient'>btc replenishment</Link></li>
 					<li ><Link href={'/withdrawal'} className='btn-gradient'>btc withdrawal</Link></li>
+					<li ><Link href={'/pool'} className='btn-gradient'>Pool Info</Link></li>
 				</ul>
 				<h2>Modals</h2>
 				<ul style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>

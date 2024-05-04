@@ -247,6 +247,12 @@
 		}
 	}
 
+	&__lineCol {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 50px;
+	}
+
 	&__sum {
 		color: var(--darkText);
 		padding: 22px 40px;
@@ -282,9 +288,17 @@
 			mask-composite: exclude;
 		}
 	}
+
+	&__daysItems {
+		display: flex;
+		width: 100%;
+	flex-wrap: wrap;
+		gap: 20px;
+	}
 }
 
 .percent {
+
 	display: flex;
 	flex-direction: column;
 	gap: 26px;
@@ -318,5 +332,82 @@
 		font-size: 18px;
 		font-weight: 300;
 		color: var(--black);
+	}
+}
+
+.dayItem {
+	position: relative;
+	cursor: pointer;
+	width: 100%;
+max-width: 148px;
+	&::before {
+		background: #B7B7B7;
+		content: '';
+		inset: -2px;
+		border-radius: 14px;
+		z-index: -1;
+		position: absolute;
+	}
+
+	input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	display: flex;
+	// align-items: center;
+
+	border-radius: 12px;
+	gap: 2px;
+
+	&__percent {
+		height: 44px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 18px;
+		text-transform: uppercase;
+		color: #404041;
+		padding: 15px 5px;
+		flex: 0 0 56px;
+		text-align: center;
+		white-space: nowrap;
+		background-color: #F7F5FC;
+		border-radius: 12px 0 0 12px;
+	}
+
+	&__days {
+		border-radius: 0 12px 12px 0;
+		align-items: center;
+		display: flex;
+		height: 44px;
+		justify-content: center;
+		background-color: #F7F5FC;
+		flex: 1;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 100%;
+		text-align: center;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+
+		color: #000000;
+
+		span {
+			font-size: 1rem;
+			margin-top: 5px;
+			font-weight: 400;
+		}
+
+	}
+
+	&:hover,
+	&.active {
+		&::before {
+			background: linear-gradient(to right, #4757e6, #8E54E9 50%, #F90B9A 100%);
+		}
 	}
 }

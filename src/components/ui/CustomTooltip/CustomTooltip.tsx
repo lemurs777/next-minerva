@@ -8,8 +8,21 @@ type Props = {
 	id: any
 	classNameIcon?: string
 	content: string
+	place?: | 'top'
+	| 'top-start'
+	| 'top-end'
+	| 'right'
+	| 'right-start'
+	| 'right-end'
+	| 'bottom'
+	| 'bottom-start'
+	| 'bottom-end'
+	| 'left'
+	| 'left-start'
+	| 'left-end'
+	classNameTooltip?: string
 }
-const CustomTooltip = ({ className, content, id, icon = '?', classNameIcon }: Props) => {
+const CustomTooltip = ({ className, content, id, icon = '?', classNameIcon, classNameTooltip, place = 'top' }: Props) => {
 	return <>
 		<div className={clsx(className, styles.tooltip)} data-tooltip-id={id}>
 			<div className={clsx(styles.tooltip__icon, classNameIcon)} >
@@ -17,8 +30,9 @@ const CustomTooltip = ({ className, content, id, icon = '?', classNameIcon }: Pr
 		</div >
 		<ReactTooltip
 			id={id}
-			place="top"
+			place={place}
 			content={content}
+			className={classNameTooltip}
 		>
 
 		</ReactTooltip>

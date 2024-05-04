@@ -3,6 +3,7 @@ import AffiliateBanner from '@/components/Banners/AffiliateBanner'
 import Banner from '@/components/Banners/Banner'
 import BannerSubscribe from '@/components/Banners/BannerSubscribe'
 import Hero from '@/components/Hero'
+import Slider from '@/components/Slider/Slider'
 import AboutBlock from '@/components/sections/About'
 import Advantages from '@/components/sections/Advantages'
 import Faq from '@/components/sections/Faq'
@@ -37,6 +38,7 @@ const HomePage = () => {
 			<div className='section home-page__calc' id='services'>
 				<ProfitCalculation />
 			</div>
+			<Slider />
 			{!breakpoints.isMobile && (
 				<div className='section' id='affiliate'>
 					<AffiliateBanner />

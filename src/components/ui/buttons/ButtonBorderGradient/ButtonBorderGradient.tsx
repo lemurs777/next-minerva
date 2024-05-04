@@ -10,16 +10,18 @@ type Props = {
 	darkText?: boolean
 	onClick?: () => void
 	type?: "submit" | "reset" | "button" | undefined
-	formBtn?: boolean
+	formBtn?: boolean,
+	size?: 'standart' | 'small'
 }
-const ButtonBorderGradient = ({ name, className, children, formBtn, type = 'button', onClick, link = '', darkText = false }: Props) => {
+const ButtonBorderGradient = ({ name, className, children, formBtn, type = 'button', onClick, link = '', darkText = false, size = 'standart' }: Props) => {
 	return <>
 		{link === '' ? (
 			<button
 				className={clsx(
 					className,
 					styles.btn,
-					formBtn && styles.secondary
+					formBtn && styles.secondary,
+					size === 'small' && styles.small
 				)}
 				type={type}
 				onClick={onClick}
@@ -34,7 +36,8 @@ const ButtonBorderGradient = ({ name, className, children, formBtn, type = 'butt
 				className={clsx(
 					className,
 					styles.btn,
-					formBtn && styles.secondary
+					formBtn && styles.secondary,
+					size === 'small' && styles.small
 				)}
 				onClick={onClick}
 				href={link}

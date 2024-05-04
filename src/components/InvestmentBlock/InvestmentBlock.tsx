@@ -10,10 +10,13 @@ import Switch from '../ui/Switch'
 import ButtonBorderGradient from '../ui/buttons/ButtonBorderGradient'
 import ButtonGradient from '../ui/buttons/ButtonGradient'
 import styles from './InvestmentBlock.module.scss'
+import Link from 'next/link'
+import InvestPeriod from '../InvestPeriod/InvestPeriod'
+import CustomTooltip from '../ui/CustomTooltip'
 const InvestmentBlock = () => {
 	const [nextStep, setNextStep] = useState(false)
 	const [active, setActive] = useState(0)
-	const offerBtns = ['starter', 'basic', 'growth', 'strategic', 'pro', 'advanced', 'elite', 'maximal']
+	const offerBtns = ['Smooth', 'basic', 'Accelerated', 'High frequency']
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
@@ -54,7 +57,10 @@ const InvestmentBlock = () => {
 								</div>
 							</div>
 							<div className={styles.offer}>
-								<div className={styles.label}>investment offer</div>
+								<div className={styles.offer__head}>
+									<div className={styles.label}>investment offer</div>
+									<div className={styles.offer__headNum}><span>from</span> 10 usdt</div>
+								</div>
 								<div className={styles.offer__btns}>
 									{offerBtns.map((btn, index) => (
 										<button
@@ -66,13 +72,18 @@ const InvestmentBlock = () => {
 									))}
 								</div>
 							</div>
-							<div className={clsx(styles.lineCenter, styles.line)}>
+							{/* <div className={clsx(styles.lineCenter, styles.line)}>
 								<div className={styles.label}>investment Period</div>
 								<div className={styles.days}><span>15</span> days</div>
+							</div> */}
+							<InvestPeriod className={styles.invest}/>
+								<div className={clsx(styles.lineCenter, styles.line)}>
+								<div className={styles.label}>trades per day <CustomTooltip place='right-end' className={styles.tooltip} classNameTooltip={styles.tooltipWrap} classNameIcon={styles.tooltipIcon} id={'id'} content={'The number of arbitrage transactions that the Minerva bot will execute daily (affects profit)'}/></div>
+								<div className={styles.days} style={{fontWeight:400,fontSize:'36px'}}>24</div>
 							</div>
 						</div>
 					</div>
-					<div className={styles.new__col}>
+					<div className={styles.summary}>
 						<div className={styles.frame}>
 							<div className={styles.frame__head}>
 								<div className={styles.frame__title}>Summary</div>
@@ -96,6 +107,13 @@ const InvestmentBlock = () => {
 							<div className={styles.frame__bottom}>
 								<div className={clsx('gradient-text', styles.frame__roi)}>ROI: +30%</div>
 								<div className={styles.frame__text}>principal returned</div>
+							</div>
+							<div className={styles.frame__text}>
+								<div className={styles.lgText}><p>A smooth bot designed for beginner investors. This bot is allocated 10% of Minerva AI`s peak load.</p></div>
+								<br />
+								<p>Working for <b>55</b> days in the general <b>SMOOTH</b> pool. The bot will make <b>24</b> arbitrage trades daily, using more than <b></b> trading pairs on <b>3</b> different DECs and CEXs.</p>
+								<br />
+								<p>See detailed pool statistics on the <Link href={'#'}>Pool Info</Link> page.</p>
 							</div>
 						</div>
 					</div>

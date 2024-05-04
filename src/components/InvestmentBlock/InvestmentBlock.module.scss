@@ -1,5 +1,5 @@
 .block {
-	max-width: 1146px;
+	max-width: 1400px;
 	margin: 0 auto;
 	border-radius: 24px;
 	background: rgba(255, 255, 255, 0.70);
@@ -110,7 +110,6 @@
 
 	&__body {
 		display: flex;
-		align-items: center;
 		gap: 1rem;
 		justify-content: space-between;
 		padding: 35px 0;
@@ -122,7 +121,7 @@
 	}
 
 	&__col {
-		max-width: 492px;
+		max-width: 610px;
 		flex: 1;
 
 		@media(max-width:991.98px) {
@@ -255,14 +254,75 @@
 	}
 }
 
+.invest {
+	font-weight: 600;
+}
+
+.tooltipWrap {
+	font-size: 12px !important;
+	background-color: #fff !important;
+	color: #000 !important;
+	width: 190px !important;
+	padding: 10px 8px 10px 30px !important;
+	opacity: 1 !important;
+	border-radius: 12px 12px 12px 0px !important;
+
+}
+
+.label {
+	position: relative;
+}
+
+.tooltip {
+	right: 0;
+	translate: 100% -50%;
+	top: 0;
+	position: absolute;
+}
+
+.tooltipIcon {
+	height: 1.5rem;
+	width: 1.5rem;
+	background-color: #BDBDBD;
+}
+
+.summary {
+	max-width: 492px;
+	flex: 1;
+	background: url('../../images/summary-bg.png') center/cover no-repeat;
+	text-align: center;
+	overflow: hidden;
+
+	.frame {
+		height: 100%;
+		padding: 60px 30px;
+
+		&__text {
+			line-height: 1.22;
+
+			b {}
+
+			a {
+				color: #1DA0C9;
+				text-decoration: underline;
+			}
+
+			.lgText {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
 .offer__btns {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
+	justify-content: space-between;
 
 	@media(max-width:767.98px) {
 		justify-content: space-between;
-		gap: 10px;
+		gap: 3px;
 
 		.offerBtn {
 			&:last-child {
@@ -381,5 +441,35 @@
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 
+	}
+}
+
+.offer {
+	&__head {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: .5rem;
+
+		.label {
+			margin-bottom: 0;
+		}
+	}
+
+	&__headNum {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 100%;
+		text-align: center;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+
+		span {
+			font-weight: 400;
+			font-size: 16px;
+
+		}
 	}
 }

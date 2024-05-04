@@ -2,8 +2,26 @@ import Title from '@/components/Title'
 import styles from './ProfitCalculation.module.scss'
 import Switch from '@/components/ui/Switch'
 import RangeSlider from '@/components/ui/RangeSlider'
+import clsx from 'clsx'
+import { useState } from 'react'
+import InvestPeriod from '@/components/InvestPeriod/InvestPeriod'
 
 const Block = () => {
+	// const investmentPeriod = [
+	// 	{
+	// 		percent: 0.8,
+	// 		days: 55
+	// 	},
+	// 	{
+	// 		percent: 1,
+	// 		days: 60
+	// 	},
+	// 	{
+	// 		percent: 0.8,
+	// 		days: 55
+	// 	},
+	// ]
+	// const [period, setPeriod] = useState(0)
 	return (
 		<div className={styles.block}>
 			<div className={styles.block__inner}>
@@ -19,12 +37,25 @@ const Block = () => {
 						</div>
 						<RangeSlider />
 					</div>
-					<div className={styles.block__line}>
+					{/* <div className={styles.block__line}>
 						investment Period
 						<span>
 							30 <small>days</small>
 						</span>
-					</div>
+					</div> */}
+					{/* <div className={clsx(styles.block__line,styles.block__lineCol)}>
+						investment Period
+						<div className={styles.block__daysItems}>
+							{investmentPeriod.map((item, index) => (
+								<label className={clsx(styles.dayItem, period === index ? styles.active : null)} key={index}>
+									<input type="radio" name="invest-period" checked={period === index ? true : false} onChange={()=>setPeriod(index)}/>
+									<div className={styles.dayItem__percent}>~{item.percent} %</div>
+									<div className={styles.dayItem__days}>{item.days}&nbsp;<span>days</span></div>
+								</label>
+							))}
+						</div>
+					</div> */}
+					<InvestPeriod />
 					<div className={styles.block__line}>
 						Compounding
 						<Switch />
