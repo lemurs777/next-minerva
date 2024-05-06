@@ -3,20 +3,19 @@
     padding: 20px;
     border-radius: 1.5rem;
     position: relative;
-    background-color: #fff;
+    border: 1px solid #b7b7b7;
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     inset: 0;
+    //     border-radius: 1.5rem;
+    //     padding: 1px;
+    //     background: linear-gradient(to right, #b7b7b7, #b7b7b7);
+    //     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    //     -webkit-mask-composite: xor;
+    //     mask-composite: exclude;
 
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 1.5rem;
-        padding: 1px;
-        background: linear-gradient(to right, #b7b7b7, #b7b7b7);
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-
-    }
+    // }
 
     &__inner {
 
@@ -25,7 +24,7 @@
 
     &:hover {
         &::after {
-            background: linear-gradient(to right, #4757E6, #8E54E9 48%, #FA0A9A);
+            // background: linear-gradient(to right, #4757E6, #8E54E9 48%, #FA0A9A);
         }
 
         .slideHeadImgActive {
@@ -45,7 +44,7 @@
     gap: 1rem;
     flex-wrap: wrap;
 
-    .slideHeadImgActive {
+    .slideHeadImgClassic {
         display: none;
     }
 
@@ -93,10 +92,16 @@
     justify-content: space-between;
     gap: 1rem;
 
+    &__text {
+        font-size: 12px;
+    }
+
 }
+
 .chart {
     margin: -30px 0;
 }
+
 // .my-swiper {
 //     padding: 42px 15px;
 //     margin: -42px -15px;
@@ -195,4 +200,3 @@
 
 
 }
-

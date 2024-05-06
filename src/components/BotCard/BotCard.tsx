@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import styles from './BotCard.module.scss'
 import RobotImg from '../../images/icons/robot.svg'

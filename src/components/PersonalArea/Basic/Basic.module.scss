@@ -45,19 +45,25 @@
 
 	&__lineSm {
 		font-size: 14px;
-		.total{
-			&:first-child{
-				.total{
-					&__info{
+
+		.total {
+			&:first-child {
+				.total {
+					&__info {
 						text-align: left;
 					}
 				}
 			}
-			&:last-child{
-				.total{
-					&__info{
+
+			&:last-child {
+				.total {
+					&__info {
 						text-align: right;
 					}
+				}
+
+				@media(max-width:767.98px) {
+					text-align: right;
 				}
 			}
 		}
@@ -146,6 +152,11 @@
 	font-style: italic;
 	font-size: 12px;
 	font-weight: 300;
+	@media(max-width:767.98px){
+		&:last-child{
+			text-align: right;
+		}
+	}
 }
 
 .btn {
@@ -172,15 +183,28 @@
 
 
 }
-.goBack{
+
+.goBack {
 	padding-top: 12px;
+
+	@media(max-width:767.98px) {
+		svg {
+			width: 15px;
+			height: 15px;
+		}
+	}
 }
+
 .tabs {
 
 	&__btns {
 		display: flex;
 		gap: 35px;
 		overflow-x: auto;
+
+		@media(max-width:1620px) {
+			gap: 0.5rem;
+		}
 	}
 
 	&__btn {
@@ -194,8 +218,8 @@
 		outline: none;
 
 		@media(max-width:767.98px) {
-			font-size: 16px;
-
+			padding: 0.5rem;
+			font-size: 1rem;
 		}
 
 		&:hover,
@@ -227,6 +251,9 @@
 .tabTable {
 	height: 385px;
 
+	@media(max-width:767.98px) {
+		height: 400px;
+	}
 }
 
 
@@ -288,12 +315,25 @@
 	transform: perspective(600px) rotateY(0);
 	overflow-y: auto;
 	position: static;
+
 	&::-webkit-scrollbar {
 		width: 2px;
-	
-	  }
+
+	}
+	@media(max-width:767.98px) {
+		transform: perspective(1600px) rotateY(0deg);
+	}
 }
 
 .back {
 	transform: perspective(600px) rotateY(180deg);
+
+	@media(max-width:1620px) {
+		height: auto;
+	}
+
+	@media(max-width:767.98px) {
+		transform: perspective(1600px) rotateY(180deg);
+	}
+
 }

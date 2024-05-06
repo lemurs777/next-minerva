@@ -229,6 +229,7 @@
 
         @media(max-width:767.98px) {
             gap: 8px;
+            width: 100%;
         }
     }
 
@@ -245,6 +246,7 @@
         @media(max-width:767.98px) {
             font-size: 16px;
             padding: 10px;
+            flex: 1;
         }
 
         &:hover,

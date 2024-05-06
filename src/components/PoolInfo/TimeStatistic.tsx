@@ -201,7 +201,7 @@ const TimeStatistic = () => {
                 <div className={styles.balance__detailLg}>Transactions: <span>452351</span> </div>
                 <div className={styles.balance__detailLg}>Profit: <span className={styles.accent}>380%</span> </div>
                 </div>
-                <div className={styles.balance__detailCol}>
+                <div className={styles.balance__detailColSm}>
                 <div className={styles.balance__detailSm}>Trading volume: <span>USDT 101306591</span></div>
                 <div className={styles.balance__detailSm}>All time profit: <span>USDT 65231691</span></div>
 

@@ -18,6 +18,7 @@ import Title from '../Title'
 import TableTitle from '../TableTitle'
 import TransactionTableSpot from '../TransactionTable/TransactionTableSpot'
 import TransactionTabsTable from '../TransactionTabsTable/TransactionTabsTable'
+
 const PoolInfo = () => {
     const series2 = [{
         data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
@@ -139,7 +140,7 @@ const PoolInfo = () => {
                                             <Image src={RobotGradientImg} alt='robot' width={40} height={40} />
                                         </div>
                                     </div>
-                                    {title}
+                                    {item.title}
                                 </div>
                                 <div className={styles.slideHead__total}>Total trades: {item.total}</div>
                             </div>

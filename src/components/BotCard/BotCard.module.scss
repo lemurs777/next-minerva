@@ -97,8 +97,14 @@
     justify-content: space-between;
     gap: 1rem;
 
-}
+    &__text {
+        // font-size: 12px;
 
+    }
+}
+.slideBottom__text{
+    font-size: 12px;
+}
 .chart {
     margin: -30px 0;
 }

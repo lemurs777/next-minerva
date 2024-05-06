@@ -67,7 +67,7 @@ const Basic = () => {
 				</div>
 				<div className={clsx(styles.basic__lineSm,styles.basic__line)}>
 					<div className={styles.total}>
-						<div className={styles.total__title}>current day profit:</div>
+						<div className={styles.total__title}>Completed transactions today</div>
 						<div className={styles.total__info}>
 							<span className={styles.accent}>5</span>/24
 						</div>
@@ -89,14 +89,14 @@ const Basic = () => {
 				<div className={styles.table}>
 					<div className={styles.table__head}>
 						<button type="button" className={styles.goBack} onClick={() => setShowTable(false)}><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<g clip-path="url(#clip0_908_4205)">
+							<g clipPath="url(#clip0_908_4205)">
 								<path d="M0.585787 14.0858C-0.195263 14.8668 -0.195263 16.1332 0.585787 16.9142L13.3137 29.6421C14.0948 30.4232 15.3611 30.4232 16.1421 29.6421C16.9232 28.8611 16.9232 27.5948 16.1421 26.8137L4.82843 15.5L16.1421 4.18629C16.9232 3.40524 16.9232 2.13891 16.1421 1.35786C15.3611 0.576814 14.0948 0.576814 13.3137 1.35786L0.585787 14.0858ZM31 13.5L2 13.5L2 17.5L31 17.5L31 13.5Z" fill="url(#paint0_linear_908_4205)" />
 							</g>
 							<defs>
 								<linearGradient id="paint0_linear_908_4205" x1="31" y1="15" x2="2" y2="15" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#4757E6" />
-									<stop offset="0.484375" stop-color="#8E54E9" />
-									<stop offset="1" stop-color="#FA0A9A" />
+									<stop stopColor="#4757E6" />
+									<stop offset="0.484375" stopColor="#8E54E9" />
+									<stop offset="1" stopColor="#FA0A9A" />
 								</linearGradient>
 								<clipPath id="clip0_908_4205">
 									<rect width="31" height="30" fill="white" transform="translate(0 0.5)" />

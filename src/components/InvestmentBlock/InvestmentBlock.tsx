@@ -76,10 +76,14 @@ const InvestmentBlock = () => {
 								<div className={styles.label}>investment Period</div>
 								<div className={styles.days}><span>15</span> days</div>
 							</div> */}
-							<InvestPeriod className={styles.invest}/>
-								<div className={clsx(styles.lineCenter, styles.line)}>
-								<div className={styles.label}>trades per day <CustomTooltip place='right-end' className={styles.tooltip} classNameTooltip={styles.tooltipWrap} classNameIcon={styles.tooltipIcon} id={'id'} content={'The number of arbitrage transactions that the Minerva bot will execute daily (affects profit)'}/></div>
-								<div className={styles.days} style={{fontWeight:400,fontSize:'36px'}}>24</div>
+							<InvestPeriod className={styles.invest} />
+							<div className={clsx(styles.lineCenter, styles.line)}>
+								<div className={styles.label}>trades per day
+									<CustomTooltip place='right-start' className={styles.tooltip}
+										classNameTooltip={styles.tooltipWrap} classNameIcon={styles.tooltipIcon}
+										id={'trades-tooltip'}
+										content={'The number of arbitrage transactions that the Minerva bot will execute daily (affects profit)'} /></div>
+								<div className={styles.days} style={{ fontWeight: 400, fontSize: '36px' }}>24</div>
 							</div>
 						</div>
 					</div>
