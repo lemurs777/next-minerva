@@ -28,9 +28,9 @@ const Login = () => {
 					</g>
 					<defs>
 						<linearGradient id="paint0_linear_111_869" x1="31" y1="14.5" x2="2" y2="14.5" gradientUnits="userSpaceOnUse">
-							<stop stop-color="#4757E6" />
-							<stop offset="0.484375" stop-color="#8E54E9" />
-							<stop offset="1" stop-color="#FA0A9A" />
+							<stop stopColor="#4757E6" />
+							<stop offset="0.484375" stopColor="#8E54E9" />
+							<stop offset="1" stopColor="#FA0A9A" />
 						</linearGradient>
 						<clipPath id="clip0_111_869">
 							<rect width="31" height="30" fill="white" />
@@ -45,8 +45,8 @@ const Login = () => {
 						<path d="M22.3673 25.6667L18.0997 21.399C17.1886 20.4879 17.1886 19.0108 18.0997 18.0997C19.0108 17.1886 20.4879 17.1886 21.399 18.0997L31.2993 28L21.399 37.9003C20.4879 38.8114 19.0108 38.8114 18.0997 37.9003C17.1886 36.9892 17.1886 35.5121 18.0997 34.601L22.3673 30.3333H9.33333C8.04467 30.3333 7 29.2887 7 28C7 26.7113 8.04467 25.6667 9.33333 25.6667H22.3673ZM25.6667 9.33333C25.6667 8.04467 26.7113 7 28 7H44.3333C46.9 7 49 9.1 49 11.6667V44.3333C49 46.9 46.9 49 44.3333 49H28C26.7113 49 25.6667 47.9553 25.6667 46.6667C25.6667 45.378 26.7113 44.3333 28 44.3333H44.3333V11.6667H28C26.7113 11.6667 25.6667 10.622 25.6667 9.33333Z" fill="url(#paint0_linear_279_4701)" />
 						<defs>
 							<linearGradient id="paint0_linear_279_4701" x1="7" y1="28" x2="49" y2="28" gradientUnits="userSpaceOnUse">
-								<stop stop-color="#4757E6" />
-								<stop offset="0.765" stop-color="#8E54E9" />
+								<stop stopColor="#4757E6" />
+								<stop offset="0.765" stopColor="#8E54E9" />
 							</linearGradient>
 						</defs>
 					</svg>

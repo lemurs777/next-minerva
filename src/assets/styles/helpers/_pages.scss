@@ -228,7 +228,8 @@
 	@supports (overflow: clip) {
 		overflow: clip;
 	}
-// @media(min-width:768px){
+
+	// @media(min-width:768px){
 
 	&::before,
 	&::after {
@@ -240,24 +241,37 @@
 		aspect-ratio: 1/1;
 		z-index: -1;
 	}
-	
+
 	&::before {
 		background-image: url('../../../images/decors/ball-3.png');
 		width: 250px;
 		top: 90px;
 		left: 0;
-		translate: -50% 0;
+
+		@media(min-width:768px) {
+			translate: -50% 0;
+		}
+		@media(max-width:767.98px){
+			width: 200px;
+		}
 	}
-	
+
 	&::after {
 		background-image: url('../../../images/decors/ball-2.png');
 		width: 290px;
 		top: 50vh;
 		right: 0;
-		translate: 50% 0;
+
+		@media(min-width:768px) {
+			translate: 50% 0;
+
+		}
+		@media(max-width:767.98px){
+			width: 230px;
+		}
 	}
-	
-// }
+
+	// }
 	@media(max-width:767.98px) {
 		padding-top: 100px;
 		align-items: flex-start;
