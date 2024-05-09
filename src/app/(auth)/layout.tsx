@@ -24,12 +24,15 @@ export default function RootLayout({ children, }: Readonly<{
 	return (
 		<html lang='en'>
 			<body className={bai.className}>
-				<div className="auth-page">
-					<div className="auth-page__header">
-						<Header />
+				<div className="wrapper">
 
+					<div className="auth-page">
+						<div className="auth-page__header">
+							<Header />
+
+						</div>
+						{children}
 					</div>
-					{children}
 				</div>
 			</body>
 		</html>
