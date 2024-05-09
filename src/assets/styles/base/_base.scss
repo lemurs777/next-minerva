@@ -42,6 +42,7 @@ body {
 
 	&.lock {
 		overflow: hidden;
+
 		@supports (overflow: clip) {
 			overflow: clip;
 		}
@@ -80,9 +81,13 @@ input[type=number] {
 	min-height: 100%;
 	overflow: hidden;
 	max-width: 100vw;
+	touch-action: none;
+	-ms-touch-action: none;
+
 	@supports (overflow: clip) {
 		overflow: clip;
 	}
+
 	main {
 		flex: 1;
 	}
@@ -135,7 +140,7 @@ input[type=number] {
 	}
 }
 
-#trades-tooltip{
+#trades-tooltip {
 	top: auto !important;
-	bottom: calc(100% + 1rem) ;
+	bottom: calc(100% + 1rem);
 }
