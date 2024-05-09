@@ -14,5 +14,20 @@
 		padding-right: 68px;
 		height: 310px;
 		overflow: auto;
+		&::-webkit-scrollbar {
+
+			width: 13px;
+		}
+	
+		&::-webkit-scrollbar-track {
+			border-radius: 9px;
+			background: #E9E9E9;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			border-radius: 9px;
+			background: #B1B1B1;
+		}
 	}
+	
 }
