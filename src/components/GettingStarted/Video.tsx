@@ -9,9 +9,9 @@ const Video = () => {
                         <path d="M39 22.5L0.750002 44.5836L0.750004 0.416352L39 22.5Z" fill="url(#paint0_linear_30_9307)" />
                         <defs>
                             <linearGradient id="paint0_linear_30_9307" x1="-8.8539" y1="9.41883" x2="43.9675" y2="25.3149" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#4757E6" />
-                                <stop offset="0.484375" stop-color="#8E54E9" />
-                                <stop offset="1" stop-color="#FA0A9A" />
+                                <stop stopColor="#4757E6" />
+                                <stop offset="0.484375" stopColor="#8E54E9" />
+                                <stop offset="1" stopColor="#FA0A9A" />
                             </linearGradient>
                         </defs>
                     </svg>

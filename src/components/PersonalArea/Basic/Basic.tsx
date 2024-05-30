@@ -45,6 +45,7 @@ const Basic = () => {
 					<div className={styles.total}>
 						<div className={styles.total__title}>Last day profit:</div>
 						<div className={styles.total__info}>
+							
 							<span>+1% /</span> +15.3 $
 						</div>
 					</div>
@@ -54,7 +55,7 @@ const Basic = () => {
 						<div className={styles.switch}>
 							<div className={styles.switch__wrap}>
 								<div className={styles.switch__title}>Reinvestment </div>
-								<Tooltip id={'reinv'} content={'lorem'} className={styles.switch__tooltip} />
+								<Tooltip id={'reinv'} content={'The number of arbitrage transactions that the Minerva bot will execute daily (affects profit)'} className={styles.switch__tooltip} />
 							</div>
 							<Switch size='small' />
 						</div>

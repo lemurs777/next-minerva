@@ -94,6 +94,16 @@ input[type=number] {
 	}
 }
 
+.react-tooltip {
+	max-width: 190px !important;
+	background-color: #fff !important;
+	color: #000 !important;
+	opacity: 1 !important;
+	word-wrap: break-word !important;
+	font-size: 12px !important;
+	padding: 10px 8px 10px 30px !important;
+}
+
 .page-content {
 	padding: 150px 0;
 	position: relative;
