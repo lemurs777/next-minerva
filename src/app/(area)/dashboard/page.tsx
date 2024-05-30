@@ -1,4 +1,5 @@
 import BalanceDynamic from '@/components/BalanceDynamic'
+import GettingStarted from '@/components/GettingStarted'
 import LatestActivities from '@/components/LatestActivities'
 import Basic from '@/components/PersonalArea/Basic'
 import NewInvestmentActivation from '@/components/PersonalArea/NewInvestmentActivation'
@@ -14,7 +15,8 @@ const DashboardPage = () => {
 							<StatusUser />
 						</div>
 						<div className="dashboard__main">
-							<BalanceDynamic />
+							{/* <BalanceDynamic /> */}
+							<GettingStarted />
 						</div>
 					</div>
 					<div className="dashboard__grid dashboard__grid--table">
